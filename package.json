@@ -1,0 +1,54 @@
+{
+  "name": "codai-sdk",
+  "version": "0.1.0",
+  "description": "Official TypeScript SDK for the codai AI gateway - chat, streaming, agents, feedback, models.",
+  "type": "module",
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "sideEffects": false,
+  "engines": {
+    "node": ">=18"
+  },
+  "publishConfig": {
+    "provenance": true
+  },
+  "keywords": [
+    "codai",
+    "ai",
+    "llm",
+    "openai-compatible",
+    "gateway",
+    "agents"
+  ],
+  "homepage": "https://codai.ro",
+  "bugs": "https://github.com/dragoscv/codai-sdk/issues",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dragoscv/codai-sdk.git"
+  },
+  "scripts": {
+    "lint": "echo 'lint runs in the codai monorepo'",
+    "typecheck": "tsc --noEmit",
+    "build": "tsup",
+    "test": "vitest run",
+    "clean": "rm -rf .turbo dist"
+  },
+  "devDependencies": {
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.3",
+    "vitest": "^4.1.7"
+  }
+}
